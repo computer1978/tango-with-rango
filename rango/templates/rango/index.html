@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+{% load static %} <!-- New line -->
+
+<html>
+	<head>
+		<title>Rango</title>
+	</head>
+	<body>
+		<h1>Rango says...</h1>
+		<div>
+			hey there partner! <br />
+			<strong>{{ boldmessage }}</strong><br />
+		</div>
+
+		<div>
+			<a href="/rango/about/">About</a><br />
+			<img width="280" height="200" src="{% static 'images\uae_flag.png' %}"
+				 alt="Picture of Humaid" /> <!-- New line -->
+		</div>
+
+			<video width="360" height="240" controls autoplay>
+				<source src="{% static 'media/Kung Fu 2.mp4' %}" type="video/mp4">
+				</source>
+			</video>
+		
+	</body>
+</html>
