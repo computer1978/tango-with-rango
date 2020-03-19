@@ -3,14 +3,28 @@
 {% load static %} <!-- New line -->
 
 <html>
+
 	<head>
 		<title>Rango</title>
 	</head>
+
 	<body>
 		<h1>Rango says...</h1>
 		<div>
 			hey there partner! <br />
-			<strong>{{ boldmessage }}</strong><br />
+			<strong>{{ boldmessage }}</strong>
+		</div>
+
+		<div>
+		{% if categories %}
+			<ul>
+			{% for category in categories %}
+				<li>{{ category.name }}</li>
+			{% endfor %}
+			</ul>
+		{% else %}
+			<strong>There are no categories present.</strong>
+		{% endif %}
 		</div>
 
 		<div>
@@ -19,10 +33,12 @@
 				 alt="Picture of Humaid" /> <!-- New line -->
 		</div>
 
+		<div>
 			<video width="360" height="240" controls autoplay>
 				<source src="{% static 'media/Kung Fu 2.mp4' %}" type="video/mp4">
 				</source>
 			</video>
-		
+		</div>
 	</body>
+	
 </html>
